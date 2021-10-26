@@ -20,47 +20,42 @@
 
   <main class="flex-row justify-space-between">
     <!-- Left Column-->
-    <div class="col-12 col-md-4">
+    <div class="col-4 col-md-4">
     <div class= "card">
       <h3 class="">Search for a City:</h3>
-      <form id="user-form" class="card-body">
-        <label class="form-label" for="username"></label>
+      <form id="search-form" class="card-body1">
+        <label class="form-label" for="cityName"></label>
         <input name="city" id="city" type="text" autofocus="true" class="form-input" />
         <div class="row"></div>
-        <button type="submit" class="btn1">Search</button>
+        <button type="submit" id= "search-button" class="btn1">Search</button>
       </form>
       <div class="card">
-        <div class="card-body" id="language-buttons">
-          <button class="btn col-12 bg-secondary text-black" data-language="austin">Austin</button>
-          <button class="btn col-12 bg-secondary text-black" data-language="chicago">Chicago</button>
-          <button class="btn col-12 bg-secondary text-black" data-language="new-york">New York</button>
-          <button class="btn col-12 bg-secondary text-black" data-language="Orlando">Orlando</button>
-          <button class="btn col-12 bg-secondary text-black" data-language="new-york">New York</button>
-          <button class="btn col-12 bg-secondary text-black" data-language="san-francisco">San Francisco</button>
-          <button class="btn col-12 bg-secondary text-black" data-language="seattle">Seattle</button>
-          <button class="btn col-12 bg-secondary text-black" data-language="denver">Denver</button>
-          <button class="btn col-12 bg-secondary text-black" data-language="Atlanta">Atlanta</button>
+        <div class="card-body" id="searches">
+          <ul id="search-history">
 
-
-  
+          </ul>
 
         </div>
       </div>
     </div>
     </div>
 
-    <div class="col-12 col-md-8">
-      <h2 class="subtitle">Current Weather:<span id="repo-search-term"></span></h2>
-      <div id="repos-container" class="list-group"></div>
+    <div class="col-4 col-md-4">
+      <h2 class="subtitle">Current Weather:<span id="weather-search-term"></span></h2>
+      <div id="weather-container" class="list-group"></div>
     </div>
 
-    <div class="col-12 col-md-8">
-        <h2 class="subtitle">5-Day Forecast <span id="repo-search-term"></span></h2>
-        <div id="repos-container" class="list-group"></div>
+    <div class="col-4 col-md-8">
+        <h2 class="subtitle">5-Day Forecast: <span id="fiveDay-search-term"></span></h2>
+        <div id="fiveDay-container" class="list-group"></div>
       </div>
+
+      
 
   </main>
   <!-- add script at the bottom of the body -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
   <script src="./assets/js/script.js"></script>
 </body>
 

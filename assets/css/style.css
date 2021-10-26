@@ -17,3 +17,12 @@
 .btn {
   margin: 10px 10px;
 }
+
+.card-body {
+  background-color: grey;
+  list-style: none;
+  color: black;
+}
+
+.uv-index {
+}
