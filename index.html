@@ -11,43 +11,71 @@
 </head>
 
 <body>
+  <!--header-->
     <div class ="row">
     <header class="title bg-dark text-light sticky-top">
     <h1>Weather Dashboard</h1>
     </div>
   </header>
 
-
-  <main class="flex-row justify-space-between">
+  <main class="">
     <!-- Left Column-->
-    <div class="col-4 col-md-4">
+    <div class="row col-12 col-md-12">
     <div class= "card">
-      <h3 class="">Search for a City:</h3>
+      <div class="">Search for a City: 
       <form id="search-form" class="card-body1">
         <label class="form-label" for="cityName"></label>
         <input name="city" id="city" type="text" autofocus="true" class="form-input" />
-        <div class="row"></div>
-        <button type="submit" id= "search-button" class="btn1">Search</button>
+        <div class="">
+        <button type="submit" id="search-button" class="btn1">Search</button>
       </form>
-      <div class="card">
+      </div>
+      <div class="row">
         <div class="card-body" id="searches">
           <ul id="search-history">
-
-          </ul>
+         </ul>
 
         </div>
+    <div class="row">
+    <div class="card col-4 col-md-4">
+      <div class="city"> Atlanta</div>
+      <div class="temp">Temp: 50°</div>
+      <div class="wind">Wind: 12 mph</div>
+      <div class="humidity">Humidity: 13 %</div>
+      <div class="UV-index:"> BOX </div>
+    </div>
+    <div class=container>
+      <div class=row>
+
       </div>
     </div>
-    </div>
-
-    <div class="col-4 col-md-4">
-      <h2 class="subtitle">Current Weather:<span id="weather-search-term"></span></h2>
-      <div id="weather-container" class="list-group"></div>
-    </div>
-
     <div class="col-4 col-md-8">
         <h2 class="subtitle">5-Day Forecast: <span id="fiveDay-search-term"></span></h2>
-        <div id="fiveDay-container" class="list-group"></div>
+        <div id="fiveDay-container" class="list-group">
+        
+        <div class=container>
+        <div id="date" class=row> Date </div>
+        <img src="icon"></img>
+        </div>
+        <div class=container>
+        <div id="date" class=row> Date </div>
+        <img src="icon"></img>
+        </div>
+        <div class=container>
+        <div id="date" class=row> Date </div>
+        <img src="icon"></img>
+        </div>
+        <div class=container>
+        <div id="date" class=row> Date </div>
+        <img src="icon"></img>
+        </div>
+        <div class=container>
+        <div id="date" class=row> Date </div>
+        <img src="icon"></img>
+     
+
+
+   
       </div>
 
       

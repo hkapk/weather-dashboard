@@ -8,6 +8,10 @@
   );
 }
 
+.card {
+  padding: 10px 10px;
+}
+
 .btn1 {
   background-color: rgba(137, 196, 244, 1);
   margin: 10px 10px;
@@ -25,4 +29,8 @@
 }
 
 .uv-index {
+}
+
+.city {
+  font-size: large;
 }
