@@ -1,13 +1,13 @@
-const searchEl = document.getElementById('search-form');
+const searchEl = document.getElementsByClassName('search-form');
 const searchButton = document.getElementById('search-button');
 const searches = JSON.parse(localStorage.getItem('searches'))||[];
 const recentSearchEl = document.getElementById('search-history');
-const searchTerm = document.querySelector('#city-search-term')
+//const city = document.querySelector('#city')
 const currentWeatherDiv = document.getElementById('current-weather')
 //const cityName = 
 
 let currentWeather = {
-    "apiKey": "&units=imperial&appid=3b5539f0c83f572df92c810c95a92c27",
+    //"apiKey": "&units=imperial&appid=3b5539f0c83f572df92c810c95a92c27",
     //fetch api from open weather
     fetchWeather: function (city) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + 
@@ -15,19 +15,45 @@ let currentWeather = {
         .then((response) => response.json())
         .then((data) => this.showWeather(data));
     },
+
+
+
+
     //function to display the weather
     showWeather: function(data) {
         const { name } = data;
-        const { icon, description } = data.weather[0];
-        const { temp, feels_like } = data.main;
+        const { temp, humidity } = data.main;
         const { speed } = data.wind;
+        const { lon, lat } = data.coord; 
         //get long & lat for second fetch to one call
-        console.log(name,icon,description,temp,feels_like,speed);
-        document.querySelector(".city").innerText = "Current Conditions in " + name;
-        document.querySelector(".icon").src = "https://openweathermap.org/img/wn" + icon + "01n";
+        console.log(name,temp,speed, humidity, lon,lat);
+        document.querySelector(".city").innerText =  name + " " + moment().format('LL');
+        document.querySelector(".temp").innerText ="Temp: " + temp + "° F";
+        document.querySelector(".wind").innerText ="Wind: " + speed + " mph";
+        document.querySelector(".humidity").innerText ="Humidity: " + humidity + "%";
+        
+            // fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat +
+            // "&lon=" + lon + "&units=imperial&appid=3b5539f0c83f572df92c810c95a92c27")
+            // .then((response) => response.json())
+            // .then((data) => this.showWeather(data));
 
+            //     const { uvi } = data.hourly.uvi;
+            //     document.querySelector(".UV-index").innerText="UVI: " + uvi;
+
+    },
+        //fetch one call with lat and lon from city search API
+
+
+
+     //function for search bar
+    search: function () {
+        this.fetchWeather(document.querySelector(".form-input").value);
+        
     }
 };
+
+
+ searchButton.addEventListener("click",currentWeather.search());
 
 //use moment to add date after city?
 //city name, date, icon rep of conditions, temp., humidity, wind speed, uv index
@@ -74,5 +100,5 @@ let currentWeather = {
 //push past searches to ul list with id "search-history"
 
 //on click of search button
-//searchButton.addEventListener("click", getApi);
+
 //find 
