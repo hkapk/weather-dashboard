@@ -20,78 +20,84 @@
 
   <main class="row">
     <!-- Left Column-->
-    <div class="card col-6 col-md-6">
-      <div class="col">Search for a City: 
+    <div class="card col-12 col-md-12">
+      <div>Search for a City: 
       <form>
-        <label class="form-label"></label>
-        <input name="city" type="text" class="form-input" placeholder="City Search"/>
+    
+        <input type= "text" class="form-input" placeholder="City Search">
        
         <button type="submit" id="search-button" class="btn1">Search</button>
       </form>
       
      
-      <div class="col-12">
-        <div class="card-body" id="searches">
+      <div class="col-6">
+        <div class="card-body">
           <ul id="search-history">
+            <h2>Previous Searches: </h2>
+            <button id="previous-search" class="col-6">Kansas City</button>
+            <button id="previous-search" class="col-6">Denver</button>
+            <button id="previous-search" class="col-6">Tokyo</button>
+            <button id="previous-search" class="col-6">Portland</button>
+
          </ul>
         </div>
       </div>
-    <div class="card col-12">
+      <div>
+    <div class="card col-6">
       <h2 class="city"> Atlanta</h2>
       <div class="temp">Temp: 50°</div>
       <div class="wind">Wind: 12 mph</div>
       <div class="humidity">Humidity: 13 %</div>
       <div class="UV-index">UV Index: </div>
-    </div>
-    </div>
-    <div class=container>
+      </div>
     
-
-  
-    </div>
+    
+    
+    
+<div class="row">
     <div class="col-12">
     <div class="card">
         <h2 class="subtitle">5-Day Forecast: <span id="fiveDay-search-term"></span></h2>
         <div id="fiveDay-container" class="list-group">
         
-        <div class=container>
+        <div class="container">
         <div class="date1" class=row> Date </div>
-        <img class="icon-1"> icon </img>
-        <div class="temp-1">Temp: </div>
-        <div class="wind-1">Wind: </div>
-        <div class="humidity-1"> Humidity: </div>
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" class="icon">  </img>
+        <div class="temp-1">Temp: 54° F</div>
+        <div class="wind-1">Wind: 6 mph</div>
+        <div class="humidity-1"> Humidity: 19% </div>
         </div>
-        <div class=container>
+        <div class="container">
         <div class="date2" class=row> Date </div>
-        <img class="icon-2"> icon </img>
-        <div class="temp-2">Temp: </div>
-        <div class="wind-2">Wind: </div>
-        <div class="humidity-2"> Humidity: </div>
+        <img src="https://openweathermap.org/img/wn/02d@2x.png" class="icon">  </img>
+        <div class="temp-2">Temp: 45° F</div>
+        <div class="wind-2">Wind: 12 mph</div>
+        <div class="humidity-2"> Humidity: 19% </div>
         </div>
-        <div class=container>
+        <div class="container">
         <div class="date3" class=row> Date </div>
-        <img class="icon-3"> icon </img>
-        <div class="temp-3">Temp: </div>
-        <div class="wind-3">Wind: </div>
-        <div class="humidity-3"> Humidity: </div>
+        <img src="https://openweathermap.org/img/wn/09d@2x.png" class="icon">  </img>
+        <div class="temp-3">Temp: 61° F</div>
+        <div class="wind-3">Wind: 2 mph</div>
+        <div class="humidity-3"> Humidity: 19% </div>
         </div>
-        <div class=container>
+        <div class="container">
         <div class="date4" class=row> Date </div>
-        <img class="icon-4"> icon </img>
-        <div class="temp-4"> Temp: </div>
-        <div class="wind-4">Wind: </div>
-        <div class="humidity-4"> Humidity: </div>
+        <img src="https://openweathermap.org/img/wn/01d@2x.png" class="icon">  </img>
+        <div class="temp-4"> Temp: 22° F</div>
+        <div class="wind-4">Wind: 8 mph</div>
+        <div class="humidity-4"> Humidity: 22%</div>
         </div>
-        <div class=container>
+        <div class="container">
         <div class="date5" class=row> Date </div>
-        <img class="icon-5"> icon </img>
-        <div class="temp-5">Temp :</div>
-        <div class="wind-5">Wind: </div>
-        <div class="humidity-5"> Humidity: </div>
+        <img src="https://openweathermap.org/img/wn/03d@2x.png" class="icon">  </img>
+        <div class="temp-5">Temp::51° F</div>
+        <div class="wind-5">Wind: 9 mph</div>
+        <div class="humidity-5"> Humidity: 19% </div>
         
      
-
-
+          </div>
+        </div>
       </div>
       </div>
 

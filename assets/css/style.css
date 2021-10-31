@@ -10,7 +10,7 @@
 }
 
 .card {
-  padding: 10px 10px;
+  padding: 40px 40px;
 }
 
 .btn1 {
@@ -28,6 +28,11 @@
   list-style: none;
   color: black;
   display: flex;
+  text-decoration: none;
+}
+
+#fiveDay-container {
+  background-color: rgba(137, 196, 244, 1);
 }
 
 .UV-index {
