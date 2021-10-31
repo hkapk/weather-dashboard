@@ -16,9 +16,6 @@ let currentWeather = {
         .then((data) => this.showWeather(data));
     },
 
-
-
-
     //function to display the weather
     showWeather: function(data) {
         const { name } = data;
@@ -32,6 +29,14 @@ let currentWeather = {
         document.querySelector(".wind").innerText ="Wind: " + speed + " mph";
         document.querySelector(".humidity").innerText ="Humidity: " + humidity + "%";
         
+
+        //update dates in 5 day
+        document.querySelector(".date1").innerText = moment().format('L')
+        document.querySelector(".date2").innerText = moment().add(1, 'days').format('L');   
+        document.querySelector(".date3").innerText = moment().add(2, 'days').format('L');  
+        document.querySelector(".date4").innerText = moment().add(3, 'days').format('L');
+        document.querySelector(".date5").innerText = moment().add(4, 'days').format('L');  
+         //fetch one call with lat and lon from city search API
             // fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat +
             // "&lon=" + lon + "&units=imperial&appid=3b5539f0c83f572df92c810c95a92c27")
             // .then((response) => response.json())
@@ -41,24 +46,17 @@ let currentWeather = {
             //     document.querySelector(".UV-index").innerText="UVI: " + uvi;
 
     },
-        //fetch one call with lat and lon from city search API
-
-
-
      //function for search bar
     search: function () {
         this.fetchWeather(document.querySelector(".form-input").value);
-        
-    }
+ }
 };
 
 
- searchButton.addEventListener("click",currentWeather.search());
+searchButton.addEventListener("click",currentWeather.search());
 
-//use moment to add date after city?
 //city name, date, icon rep of conditions, temp., humidity, wind speed, uv index
 //uv index = color of the uv index ie favorable, moderate, severe
-
 
 
 //currentWeather.fetchWeather to log in console
@@ -96,9 +94,15 @@ let currentWeather = {
 
 // };
 
+    
+    // 11/09/2021
+
+
+
 
 //push past searches to ul list with id "search-history"
 
 //on click of search button
 
 //find 
+//update date

@@ -30,5 +30,8 @@
   display: flex;
 }
 
-.uv-index {
+.UV-index {
+  background-color: red;
+  color: white;
+  width: 15%;
 }
