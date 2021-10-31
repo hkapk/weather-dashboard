@@ -5,7 +5,7 @@ const recentSearchEl = document.getElementById('search-history');
 //const city = document.querySelector('#city')
 //const currentWeatherDiv = document.getElementById('current-weather')
 //const cityName = 
-const previousSearch = document.getElementById('previous-search');
+//const previousSearch = document.getElementById('previous-search');
 
 let currentWeather = {
     //"apiKey": "&units=imperial&appid=3b5539f0c83f572df92c810c95a92c27",
@@ -63,12 +63,31 @@ let currentWeather = {
 };
 
 searchButton.addEventListener("click", function () {
-    currentWeather.search();
+    currentWeather.fetchWeather(document.querySelector(".form-input").value);
 });
 
 
 
-    
+
+document.querySelector(".previous-search-1").addEventListener("click", function() {
+    currentWeather.fetchWeather("Kansas City");
+}
+);
+
+document.querySelector(".previous-search-2").addEventListener("click", function() {
+    currentWeather.fetchWeather("Denver");
+}
+);
+
+document.querySelector(".previous-search-3").addEventListener("click", function() {
+    currentWeather.fetchWeather("Tokyo");
+}
+);
+
+document.querySelector(".previous-search-4").addEventListener("click", function() {
+    currentWeather.fetchWeather("Portland");
+}
+);
 
 
 //previousSearch.addEventListener("click", console.log("button click"));
