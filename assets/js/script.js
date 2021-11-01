@@ -56,6 +56,7 @@ let currentWeather = {
      //function for search bar
      search: function () {
          this.fetchWeather(document.querySelector(".form-input").value);
+         //document.querySelector("previous-search-1").innerText = (".form-input").value;
             
         },
         
@@ -63,7 +64,7 @@ let currentWeather = {
 };
 
 searchButton.addEventListener("click", function () {
-    currentWeather.fetchWeather(document.querySelector(".form-input").value);
+    currentWeather.search();
 });
 
 
